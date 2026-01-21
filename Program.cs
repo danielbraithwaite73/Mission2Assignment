@@ -29,6 +29,7 @@ internal class Program
 
         }
         System.Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
+        System.Console.ReadLine(); //added this at the end so when you run the .exe it doesn't immediately close
     }
 
 }
