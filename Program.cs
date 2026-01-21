@@ -1,6 +1,5 @@
 ﻿using Mission2Assignment;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System;
 
 internal class Program
 {
@@ -9,27 +8,27 @@ internal class Program
         int rolls = 0;
         int[] results = new int[12];
 
-        Console.WriteLine("Welcome to the dice throwing simulator!");
+        System.Console.WriteLine("Welcome to the dice throwing simulator!");
 
-        Console.WriteLine("How many dice rolls would you like to simulate?");
+        System.Console.WriteLine("How many dice rolls would you like to simulate?");
 
-        rolls = int.Parse(Console.ReadLine());
+        rolls = int.Parse(System.Console.ReadLine());
 
         results = DiceRoll.RollingDice(rolls);
 
-        Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
-        Console.WriteLine("Each * represents 1% of the total number of rolls.");
-        Console.WriteLine("Total Number of Rolls = " + rolls +".");
+        System.Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
+        System.Console.WriteLine("Each * represents 1% of the total number of rolls.");
+        System.Console.WriteLine("Total Number of Rolls = " + rolls +".");
         for (int i = 0; i < results.Length; i++)
         {
             double percent = (double)results[i] / rolls * 100; 
             int numStars = (int)Math.Round(percent);
 
-            Console.Write((i + 1) + ": ");
-            Console.WriteLine(new string('*', numStars));
+            System.Console.Write((i + 1) + ": ");
+            System.Console.WriteLine(new string('*', numStars));
 
         }
-        Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
+        System.Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
     }
 
 }
