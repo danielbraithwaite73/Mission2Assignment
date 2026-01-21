@@ -5,7 +5,7 @@ namespace Mission2Assignment
     internal class DiceRoll
     {
         public static int[] RollingDice(int numOfRolls)
-        {
+        {//Method to simulate rolling two dice a specified number of times
             int[] results = new int[12];
             Random r = new Random();
 
